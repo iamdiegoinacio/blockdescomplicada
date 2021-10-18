@@ -1,10 +1,10 @@
 import './App.css';
-import AcessoDesktop from './pages/AcessoDesktop/AcessoDesktop';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <div>
-        <AcessoDesktop />
+        <Home />
     </div>
   );
 }
