@@ -1,0 +1,29 @@
+.container-login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-login button{
+    margin-bottom: 32px;
+}
+
+.container-login a{
+    margin-bottom: 16px;
+}
+
+.container-login img{
+    width: 90%;
+}
+
+.container-login h1{
+    margin-bottom: 32px;
+}
+
+.botao-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
