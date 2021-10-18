@@ -1,10 +1,10 @@
 import './App.css';
-import RecuperarSenhaSucesso from './pages/RecuperarSenhaSucesso/RecuperarSenhaSucesso';
+import AcessoDesktop from './pages/AcessoDesktop/AcessoDesktop';
 
 function App() {
   return (
     <div>
-        <RecuperarSenhaSucesso />
+        <AcessoDesktop />
     </div>
   );
 }

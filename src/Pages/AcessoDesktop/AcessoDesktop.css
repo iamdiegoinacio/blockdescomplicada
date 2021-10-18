@@ -1,0 +1,26 @@
+.container-acesso-desktop{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-acesso-desktop img{
+    width: 30%;
+}
+
+.container-acesso-desktop h1{
+    margin-bottom: 32px;
+    font-size: 64px;
+}
+
+.container-acesso-desktop span{
+    margin-bottom: 32px;
+    color: var(--main-cor-padrao-4);
+    font-size: 22px;
+}
+
+.container-acesso-desktop span:nth-child(4){
+    color: var(--main-cor-padrao-7);
+}
