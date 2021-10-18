@@ -1,10 +1,10 @@
 import './App.css';
-import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
+import RecuperarSenhaSucesso from './pages/RecuperarSenhaSucesso/RecuperarSenhaSucesso';
 
 function App() {
   return (
     <div>
-        <RecuperarSenha/>
+        <RecuperarSenhaSucesso />
     </div>
   );
 }
