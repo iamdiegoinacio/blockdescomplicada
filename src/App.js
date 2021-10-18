@@ -1,10 +1,10 @@
 import './App.css';
-import Cadastro from './pages/Cadastro/Cadastro';
+import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
 
 function App() {
   return (
     <div>
-        <Cadastro />
+        <RecuperarSenha/>
     </div>
   );
 }
