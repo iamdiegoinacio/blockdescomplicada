@@ -1,5 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* PALETA DE CORES */
+:root{
+  --main-titulo: #373737;
+  --main-subtitulo: #575757;
+  --main-texto: #6A6A6A;
+  --main-placeholder: #989898;
+  --main-cor-padrao-1: #7D97F4;
+  --main-cor-padrao-2: #5961F4;
+  --main-cor-padrao-3: #4A4CF6;
+  --main-cor-padrao-4: #373737;
+  --main-cor-padrao-5: #575757;
+  --main-cor-padrao-6: #6A6A6A;
+  --main-cor-padrao-7: #989898;
+  --main-cor-neutra: #FFF;
+}
+
+/* RESETS */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* PADRÕES */
+h1{
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: var(--main-titulo);
+}
+
+h2{
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: var(--main-subtitulo);
+  font-size: 24px;
+}
+
+h3{
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: var(--main-subtitulo);
+  font-size: 16px;
+}
+
+p{
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: var(--main-texto);
+}
+
+a{
+  text-decoration: none;
+  color: var(--main-texto);
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+}
+
+a:active{
+  color: var(--main-cor-padrao-2);
+}
+
+span{
+  font-family: 'Roboto';
+  color: var(--main-texto);
+  font-size: 14px;
+}
+
+.botao-padrao-1{
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main-cor-padrao-1);
+  color: var(--main-cor-neutra);
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.botao-padrao-1:active{
+  background-color: var(--main-cor-padrao-2);
+}
+
+/* FORMULÁRIO PADRÃO */
+form{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  width: 80%;
+}
+
+form label{
+  color: var(--main-cor-padrao-5);
+  margin-bottom: 6px;
+}
+
+form input{
+  color: var(--main-cor-padrao-5); 
+  height: 40px;
+  border: 1px solid var(--main-cor-padrao-7);
+  border-radius: 5px;
+  box-shadow: none;  
+  padding-left: 8px; 
+  margin-bottom: 16px;
+}
+
+form input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 2px solid var(--main-cor-padrao-1);
+}
+
+form input::placeholder{
+  color: var(--main-placeholder);
 }
