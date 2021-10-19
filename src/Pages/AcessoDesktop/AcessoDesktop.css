@@ -17,10 +17,10 @@
 
 .container-acesso-desktop span{
     margin-bottom: 32px;
-    color: var(--main-cor-padrao-4);
+    color: var(--main-cor-span);
     font-size: 22px;
 }
 
 .container-acesso-desktop span:nth-child(4){
-    color: var(--main-cor-padrao-7);
+    color: var(--main-cor-span-claro);
 }

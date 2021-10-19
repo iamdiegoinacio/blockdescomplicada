@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-/* PALETA DE CORES */
+/* CORES PADRÕES */
 :root{
   --main-titulo: #373737;
   --main-subtitulo: #575757;
   --main-texto: #6A6A6A;
+  --main-ancora: #6A6A6A;
+  --main-cor-span: #373737;
+  --main-cor-span-claro: #989898;
   --main-placeholder: #989898;
-  --main-cor-padrao-1: #7D97F4;
-  --main-cor-padrao-2: #5961F4;
-  --main-cor-padrao-3: #4A4CF6;
-  --main-cor-padrao-4: #373737;
-  --main-cor-padrao-5: #575757;
-  --main-cor-padrao-6: #6A6A6A;
-  --main-cor-padrao-7: #989898;
+
+  --main-texto-input: #575757;
+  --main-border-input: #989898;
+  --main-label-form: #575757;
+
+  --main-cor-icone-burguer: #989898;
+  --main-cor-background-menu-lateral: #7c7676;
+  --main-cor-botao-fechamento-menu: #bdc3c7;
+  --main-overlay-menu: rgba(0, 0, 0, 0.3);
+  
+  --main-cor-primaria: #7D97F4;
+  --main-cor-secundaria: #5961F4;
+  --main-cor-terciaria: #4A4CF6;
+  --main-cor-quaternaria: #373737;
   --main-cor-neutra: #FFF;
 }
 
@@ -28,6 +38,7 @@ h1{
   font-family: 'Roboto';
   font-weight: 500;
   color: var(--main-titulo);
+  font-size: 32px;
 }
 
 h2{
@@ -37,29 +48,23 @@ h2{
   font-size: 24px;
 }
 
-h3{
-  font-family: 'Roboto';
-  font-weight: 300;
-  color: var(--main-subtitulo);
-  font-size: 16px;
-}
-
 p{
   font-family: 'Roboto';
   font-weight: 300;
   color: var(--main-texto);
+  font-size: 16px;
 }
 
 a{
   text-decoration: none;
-  color: var(--main-texto);
+  color: var(--main-ancora);
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 14px;
 }
 
 a:active{
-  color: var(--main-cor-padrao-2);
+  color: var(--main-cor-secundaria);
 }
 
 span{
@@ -73,7 +78,7 @@ span{
   height: 50px;
   border-radius: 5px;
   border: none;
-  background-color: var(--main-cor-padrao-1);
+  background-color: var(--main-cor-primaria);
   color: var(--main-cor-neutra);
   text-transform: uppercase;
   font-family: 'Roboto';
@@ -82,7 +87,7 @@ span{
 }
 
 .botao-padrao-1:active{
-  background-color: var(--main-cor-padrao-2);
+  background-color: var(--main-cor-secundaria);
 }
 
 /* FORMULÁRIO PADRÃO */
@@ -94,14 +99,14 @@ form{
 }
 
 form label{
-  color: var(--main-cor-padrao-5);
+  color: var(--main-label-form);
   margin-bottom: 6px;
 }
 
 form input{
-  color: var(--main-cor-padrao-5); 
+  color: var(--main-texto-input); 
   height: 40px;
-  border: 1px solid var(--main-cor-padrao-7);
+  border: 1px solid var(--main-border-input);
   border-radius: 5px;
   box-shadow: none;  
   padding-left: 8px; 
@@ -111,7 +116,7 @@ form input{
 form input:focus{
   box-shadow: 0 0 0 0;
   outline: 0;
-  border: 2px solid var(--main-cor-padrao-1);
+  border: 2px solid var(--main-cor-primaria);
 }
 
 form input::placeholder{

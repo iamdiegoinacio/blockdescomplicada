@@ -19,5 +19,5 @@
 }
 
 .container-recuperar-senha-sucesso span:nth-child(4){
-    color: var(--main-cor-padrao-7);
+    color: var(--main-cor-span-claro);
 }
