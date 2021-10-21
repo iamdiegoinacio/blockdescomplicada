@@ -1,0 +1,45 @@
+.questao-container{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px 40px 40px 40px;
+}
+
+.questao-container h2{
+    margin-bottom: 22px;
+}
+
+ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.opcao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    color: var(--main-texto);
+    border-radius: 10px;
+    border: 1px solid var(--main-cor-secundaria);
+    max-height: 100px;
+    min-height: 40px;
+    padding: 10px;
+}
+
+.opcao li{
+    margin-left: 10px;
+}
+
+.circulo-questao{
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--main-cor-terciaria);
+    border-radius: 100px;
+}
+
+.questao-container button{
+    margin-top: 20px;
+}
