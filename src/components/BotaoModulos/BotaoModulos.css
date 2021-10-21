@@ -1,0 +1,11 @@
+.botao-modulos{
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    height: 70px;
+    color: var(--main-cor-neutra);
+    font-family: 'Roboto';
+    font-size: 26px;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}

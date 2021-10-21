@@ -1,0 +1,23 @@
+.container-modulos{
+    display: flex;
+    flex-direction: column;
+}
+
+.modulos-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modulos-conteudo img{
+    width: 70%; 
+}
+
+.modulos-conteudo h1{
+    margin-bottom: 20px;
+}
+
+.modulos-conteudo form{
+    margin-bottom: 40px;
+}
