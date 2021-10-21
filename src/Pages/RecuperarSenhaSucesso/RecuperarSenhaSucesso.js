@@ -7,6 +7,6 @@ const RecuperarSenhaSucesso = () => {
             <span>Link de recuperação enviado para o e-mail</span>
             <span>Verifique a caixa de entrada e spam</span>
         </div>
-    )
+    ) 
 }
 export default RecuperarSenhaSucesso;
