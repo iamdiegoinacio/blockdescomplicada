@@ -1,0 +1,29 @@
+.conteudo-item{
+    margin-bottom: 20px;
+}
+
+.conteudo-item h2{
+    margin-bottom: 10px;
+}
+
+.conteudo-item button{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 80%;
+    border: 2px solid var(--main-cor-secundaria);
+    background-color: var(--main-cor-neutra);
+    border-radius: 5px;
+    font-family: 'Roboto';
+    color: var(--main-texto);
+    padding-left: 10px;
+}
+
+.conteudo-item button:active{
+    transform: scale(90%);
+}
+
+.conteudo-item img{
+    width: 30px;
+    height: 30px;
+}
