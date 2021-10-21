@@ -1,0 +1,19 @@
+.container-home{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-conteudo img{
+    width: 70%; 
+}
+
+.home-conteudo h1{
+    margin-bottom: 20px;
+}
