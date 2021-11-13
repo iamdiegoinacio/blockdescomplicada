@@ -1,10 +1,16 @@
 import './App.css';
-import Home from './pages/Home/Home';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes/Routes';
+import AuthProvider from './contexts/AuthContext';
 
 function App() {
   return (
     <div>
-        <Home />
+        <AuthProvider>
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+        </AuthProvider>
     </div>
   );
 }

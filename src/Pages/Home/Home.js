@@ -1,6 +1,5 @@
 import './Home.css';
 import Topo from '../../components/Topo/Topo';
-
 import { FaUserAlt, FaRegQuestionCircle, FaGg, FaCodepen } from "react-icons/fa";
 import BotaoHome from '../../components/BotaoHome/BotaoHome';
 const Home = () => {
@@ -19,3 +18,4 @@ const Home = () => {
     )
 }
 export default Home;
+

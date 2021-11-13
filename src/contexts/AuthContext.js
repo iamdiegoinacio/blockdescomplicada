@@ -1,17 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react';
-import firebase from '../services/firebase'
-import 'firebase/auth';
+import { useEffect, useState, createContext } from 'react';
+import firebase from '../services/firebase';
 
-const auth = firebase.auth();
-const AuthContext = React.createContext();
+export const AuthContext = createContext({
 
-export const useAuth = () => {
-    return useContext(AuthContext);
-}
+});
 
 export const AuthProvider = ({ children }) => {
-    const [ currentUser, setCurrentUser ] = useState();
+    const [ currentUser, setCurrentUser ] = useState(null);
     const [ loading, setLoading ] = useState();
+    const [ isFirstEnter, setIsFirstEnter ] = useState(false);
+
+    return (
+        <AuthContext.Provider value={{ signed: !!currentUser, currentUser, loading }}>
+            {children}
+        </AuthContext.Provider>
+    )  
 }
 
 export default AuthProvider;
