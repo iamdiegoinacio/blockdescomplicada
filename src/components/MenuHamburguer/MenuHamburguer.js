@@ -1,14 +1,26 @@
+import { useContext } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import './MenuHamburguer.css';
-import { FaHome, FaUserAlt, FaRegQuestionCircle, FaGg, FaCodepen } from "react-icons/fa";
+import { FaHome, FaUserAlt, FaRegQuestionCircle, FaGg, FaCodepen, FaChevronLeft} from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+
 export const MenuHamburguer = () => {
+
+    const { logOut } = useContext(AuthContext);
+
+    function handleLogout(){
+        logOut();
+    }
+
     return (
         <Menu width={ 250 }>
-            <a id="home" className="menu-item" href="/"><FaHome style={{marginRight: '10px'}} />Home</a>
-            <a id="about" className="menu-item" href="/about"><FaUserAlt style={{marginRight: '10px'}} />Perfil</a>
-            <a id="contact" className="menu-item" href="/contact"><FaRegQuestionCircle style={{marginRight: '10px'}} />Questões</a>
-            <a id="contact" className="menu-item" href="/contact"><FaGg style={{marginRight: '10px'}} />Módulos</a>
-            <a id="contact" className="menu-item" href="/contact"><FaCodepen style={{marginRight: '10px'}} />Progresso</a>
+            <Link to="/home" className="menu-item"><FaHome style={{marginRight: '10px'}} />Home</Link>
+            <Link to="/perfil" className="menu-item"><FaUserAlt style={{marginRight: '10px'}} />Perfil</Link>
+            <Link to="/questoes" className="menu-item"><FaRegQuestionCircle style={{marginRight: '10px'}} />Questões</Link>
+            <Link to="/modulos" className="menu-item"><FaGg style={{marginRight: '10px'}} />Módulos</Link>
+            <Link to="/progresso" className="menu-item"><FaCodepen style={{marginRight: '10px'}} />Progresso</Link>
+            <span onClick={() => handleLogout()} className="menu-item" alt="Deslogar"><FaChevronLeft style={{marginRight: '10px'}} />Deslogar</span>
         </Menu>
     )
 }
