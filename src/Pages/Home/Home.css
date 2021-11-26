@@ -10,6 +10,14 @@
     align-items: center;
 }
 
+.home-conteudo a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .home-conteudo img{
     width: 70%; 
 }
