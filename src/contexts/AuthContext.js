@@ -166,7 +166,7 @@ export const AuthProvider = ({ children }) => {
                     storageUser.firstModule = true;
                     storageUser.progress = storageUser.progress += 25;
                     storageCurrentUser(storageUser);
-                    return <Redirect to="/modulos"/>
+                    refreshPage();
                 })
                 .catch((error) => {
                     console.log(error);
@@ -192,7 +192,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.secondModule = true;
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
-                     return <Redirect to="/modulos"/>
+                     refreshPage();
                  })
                  .catch((error) => {
                      console.log(error);
@@ -218,7 +218,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.thirdModule = true;
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
-                     window.location.reload();
+                     refreshPage();
                  })
                  .catch((error) => {
                      console.log(error);
@@ -244,7 +244,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.fourthModule = true;
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
-                     window.location.reload();
+                     refreshPage();
                  })
                  .catch((error) => {
                      console.log(error);
@@ -258,8 +258,12 @@ export const AuthProvider = ({ children }) => {
         }
     }
 
+    function refreshPage(){ 
+        window.location.reload(); 
+    }
+    
     return (
-        <AuthContext.Provider value={{ signed: !!currentUser, currentUser, loading, signUp, signIn, logOut, resetPassword, updatePassword, completeModule}}>
+        <AuthContext.Provider value={{ signed: !!currentUser, currentUser, loading, signUp, signIn, logOut, resetPassword, updatePassword, completeModule, refreshPage}}>
             {children}
         </AuthContext.Provider>
     )
