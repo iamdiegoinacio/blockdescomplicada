@@ -1,4 +1,4 @@
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 import RouteWrapper from './Route';
 import BoasVindas from '../pages/BoasVindas/BoasVindas';
 import Home from '../pages/Home/Home';
@@ -20,11 +20,17 @@ import { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 
 export default function Routes() {
+    const isFirstAccess = localStorage.getItem('firstAccess');
+    
+    if(isFirstAccess===null){
+        return(
+            <Switch>
+                <RouteWrapper exact path="/" component={BoasVindas} />
+            </Switch>
+        )
+    }
     return (
         <Switch>
-            {/* <RouteWrapper path="/acessodesktop" component={AcessoDesktop} /> */}
-            <RouteWrapper exact path="/boasvindas" component={BoasVindas} />
-
             <RouteWrapper exact path="/" component={Login} />
             <RouteWrapper exact path="/login" component={Login} />
             <RouteWrapper exact path="/cadastro" component={Cadastro} />
