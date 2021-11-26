@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     height: 40px;
-    width: 80%;
+    width: 100%;
     border: 2px solid var(--main-cor-secundaria);
     background-color: var(--main-cor-neutra);
     border-radius: 5px;
