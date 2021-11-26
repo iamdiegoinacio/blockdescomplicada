@@ -1,19 +1,24 @@
 import { useEffect, useState } from 'react';
 import './BotaoModulos.css';
-export default function BotaoModulos({modulo, tipo}){
-   
-    const [tipoSelecionado, setTipoSelecionado] = useState(null);
+
+export default function BotaoModulos({setup}) {
+    const [selectType, setSelectType] = useState(null);
 
     useEffect(() => {
-        if(tipo===1){
-            setTipoSelecionado('var(--main-cor-primaria');
-        }else if(tipo===2){
-            setTipoSelecionado('var(--main-cor-secundaria');
-        }else if (tipo===3){
-            setTipoSelecionado('var(--main-cor-terciaria');
+        if (setup.type === 1) {
+            setSelectType('var(--main-cor-primaria');
+        } else if (setup.type === 2) {
+            setSelectType('var(--main-cor-secundaria');
+        } else if (setup.type === 3) {
+            setSelectType('var(--main-cor-terciaria');
+        } else if (setup.type === 4){
+            setSelectType('var(--main-cor-quaternaria');
         }else{
-            setTipoSelecionado('var(--main-cor-quaternaria');
+            return false;
         }
-    });
-    return(<button className="botao-modulos" style={{background: tipoSelecionado}} onTouchStart={() => setTipoSelecionado('var(--main-cor-neutra')}>{modulo}</button>)
+    }, []);
+ 
+    return (
+        <button className="botao-modulos" style={{backgroundColor: selectType}}>{setup.text}</button>
+    )
 }
