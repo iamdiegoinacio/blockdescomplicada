@@ -1,4 +1,5 @@
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import RouteWrapper from './Route';
 import BoasVindas from '../pages/BoasVindas/BoasVindas';
 import Home from '../pages/Home/Home';
 import AcessoDesktop from '../pages/AcessoDesktop/AcessoDesktop';
@@ -20,22 +21,23 @@ import AlterarSenha from '../pages/AlterarSenha/AlterarSenha';
 export default function Routes(){
     return(
         <Switch>
-            <Route exact path="/acessodesktop" component={AcessoDesktop} />
-            <Route exact path="/boasvindas" component={BoasVindas} />
+            <RouteWrapper exact path="/acessodesktop" component={AcessoDesktop} />
+            <RouteWrapper exact path="/boasvindas" component={BoasVindas} />
 
-            <Route exact path="/" component={Login} />
-            <Route exact path="/cadastro" component={Cadastro} />
-            <Route exact path="/recuperarsenha" component={RecuperarSenha} />
-            <Route exact path="/recuperarsenhasucesso" component={RecuperarSenhaSucesso} />
+            <RouteWrapper exact path="/" component={Login} />
+            <RouteWrapper exact path="/login" component={Login} />
+            <RouteWrapper exact path="/cadastro" component={Cadastro} />
+            <RouteWrapper exact path="/recuperarsenha" component={RecuperarSenha} />
+            <RouteWrapper exact path="/recuperarsenhasucesso" component={RecuperarSenhaSucesso} />
 
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/perfil" component={Perfil} />
-            <Route exact path="/progresso" component={Progresso} />
-            <Route exact path="/questoes" component={Questoes} />
-            <Route exact path="/pergunta" component={Pergunta} />
-            <Route exact path="/modulos" component={Modulos} />
-            <Route exact path="/modulos/:moduloselecionado" component={ModuloSelecionado} />
-            <Route exact path="/alterarsenha" component={AlterarSenha} />
+            <RouteWrapper exact path="/home" component={Home} isPrivate/>
+            <RouteWrapper exact path="/perfil" component={Perfil} isPrivate/>
+            <RouteWrapper exact path="/progresso" component={Progresso} isPrivate/>
+            <RouteWrapper exact path="/questoes" component={Questoes} isPrivate/>
+            <RouteWrapper exact path="/pergunta" component={Pergunta} isPrivate/>
+            <RouteWrapper exact path="/modulos" component={Modulos} isPrivate/>
+            <RouteWrapper exact path="/modulos/:moduloselecionado" component={ModuloSelecionado} isPrivate/>
+            <RouteWrapper exact path="/alterarsenha" component={AlterarSenha} isPrivate/>
         </Switch>
     )
 }

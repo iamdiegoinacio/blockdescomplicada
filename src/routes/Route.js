@@ -7,19 +7,17 @@ import { AuthContext } from '../contexts/AuthContext';
     atributos do componente Route 
 */
 export default function RouteWrapper({component : Component, isPrivate, ...rest}){
-    const { signed, isFirstEnter } = useContext(AuthContext);
+    const { currentUser, signed} = useContext(AuthContext);
 
-    if(isFirstEnter){
-        return <Redirect to="/boasvindas" />
+    console.log("CURRENT USER => ",currentUser);
+
+    if(!signed && isPrivate){
+        return <Redirect to="/login" />
     }
-    
-    // if(!signed && isPrivate){
-    //     return <Redirect to="/" />
-    // }
 
-    // if(signed && !isPrivate){
-    //     return <Redirect to="/dashboard" />
-    // }
+    if(signed && !isPrivate){
+        return <Redirect to="/home" />
+    }
 
     return(
         <Route {...rest} render={props => (<Component {...props}/>)} />
