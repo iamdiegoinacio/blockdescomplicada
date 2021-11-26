@@ -22,7 +22,7 @@
   --main-cor-primaria: #7D97F4;
   --main-cor-secundaria: #5961F4;
   --main-cor-terciaria: #4A4CF6;
-  --main-cor-quaternaria: #373737;
+  --main-cor-quaternaria: #3638FD;
   --main-cor-neutra: #FFF;
 }
 
@@ -31,6 +31,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a, button{
+  cursor: pointer;
 }
 
 /* PADRÕES */
@@ -61,6 +65,7 @@ a{
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 14px;
+  cursor: pointer;
 }
 
 a:active{
