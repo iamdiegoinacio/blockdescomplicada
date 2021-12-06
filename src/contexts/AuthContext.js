@@ -262,9 +262,79 @@ export const AuthProvider = ({ children }) => {
     function refreshPage(){ 
         window.location.reload(); 
     }
+
+    async function handleUpload(name, surname, avatarImg, user){
+        const currentUid = user.uid;
+
+        const uploadTask = await firebase.storage()
+        .ref(`images/${currentUid}/${avatarImg.name}`)
+        .put(avatarImg)
+        .then(async () => {
+            console.log('Photo send success');
+
+            await firebase.storage().ref(`images/${currentUid}`)
+            .child(avatarImg.name).getDownloadURL()
+            .then( async (url) => {
+                let urlPhoto = url;
+
+                await firebase.firestore().collection('users')
+                .doc(user.uid)
+                .update({
+                    avatarUrl: urlPhoto,
+                })
+                .then(() => {
+                    let data = {
+                        ...user,
+                        avatarUrl: urlPhoto,
+                        name: name
+                    };
+
+                    setCurrentUser(data);
+                    storageCurrentUser(data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+        }) 
+    }
+
+    async function handleSave(name, surname, avatarImg, user, e){
+        e.preventDefault();
+        
+        if(name !== '' && surname !== '' && avatarImg === null){
+            await firebase.firestore().collection('users')
+            .doc(user.uid)
+            .update({
+                name: name,
+                surname: surname
+            })
+            .then(() => {
+                let data ={
+                    ...user,
+                    name: name,
+                    surname: surname
+                };
+
+                setCurrentUser(data);
+                storageCurrentUser(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        }else if(name !== '' && surname !== ''  && avatarImg !== null){
+            handleUpload(name, surname, avatarImg, user);
+        }
+    }
     
     return (
-        <AuthContext.Provider value={{ signed: !!currentUser, currentUser, loading, signUp, signIn, logOut, resetPassword, updatePassword, completeModule, refreshPage}}>
+        <AuthContext.Provider value={{ signed: !!currentUser, currentUser, loading, signUp, signIn, logOut, resetPassword, updatePassword, completeModule, refreshPage, handleSave}}>
             {children}
         </AuthContext.Provider>
     )

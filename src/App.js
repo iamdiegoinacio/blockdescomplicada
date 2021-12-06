@@ -7,7 +7,7 @@ import AcessoDesktop from './pages/AcessoDesktop/AcessoDesktop';
 import BoasVindas from './pages/BoasVindas/BoasVindas';
 
 function App() {
-  
+    
   return (
     <div>
         <AuthProvider>

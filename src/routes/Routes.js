@@ -1,8 +1,7 @@
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import RouteWrapper from './Route';
 import BoasVindas from '../pages/BoasVindas/BoasVindas';
 import Home from '../pages/Home/Home';
-import AcessoDesktop from '../pages/AcessoDesktop/AcessoDesktop';
 
 import Login from '../pages/Login/Login';
 import Cadastro from '../pages/Cadastro/Cadastro';
@@ -16,8 +15,6 @@ import Pergunta from '../pages/Pergunta/Pergunta';
 import Modulos from '../pages/Modulos/Modulos';
 import ModuloSelecionado from '../pages/ModuloSelecionado/ModuloSelecionado';
 import AlterarSenha from '../pages/AlterarSenha/AlterarSenha';
-import { useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
 
 export default function Routes() {
     const isFirstAccess = localStorage.getItem('firstAccess');
