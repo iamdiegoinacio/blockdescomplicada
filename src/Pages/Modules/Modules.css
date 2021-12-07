@@ -1,0 +1,27 @@
+.modules-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.modules-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modules-content a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modules-content img{
+    width: 70%; 
+}
+
+.modules-content h1{
+    margin-bottom: 20px;
+}

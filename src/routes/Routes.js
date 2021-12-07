@@ -12,7 +12,7 @@ import Profile from '../pages/Profile/Profile';
 import Progress from '../pages/Progress/Progress';
 import Questoes from '../pages/Questoes/Questoes';
 import Pergunta from '../pages/Pergunta/Pergunta';
-import Modulos from '../pages/Modulos/Modulos';
+import Modules from '../pages/Modules/Modules';
 import ModuloSelecionado from '../pages/ModuloSelecionado/ModuloSelecionado';
 import AlterarSenha from '../pages/AlterarSenha/AlterarSenha';
 
@@ -39,7 +39,7 @@ export default function Routes() {
             <RouteWrapper exact path="/progresso" component={Progress} isPrivate />
             <RouteWrapper exact path="/questoes" component={Questoes} isPrivate />
             <RouteWrapper exact path="/pergunta" component={Pergunta} isPrivate />
-            <RouteWrapper exact path="/modulos" component={Modulos} isPrivate />
+            <RouteWrapper exact path="/modulos" component={Modules} isPrivate />
             <RouteWrapper exact path="/modulos/:moduloselecionado" component={ModuloSelecionado} isPrivate />
             <RouteWrapper exact path="/alterarsenha" component={AlterarSenha} isPrivate />
         </Switch>
