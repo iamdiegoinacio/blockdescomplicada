@@ -2,6 +2,7 @@ import './UpdatePassword.css';
 import Header from '../../components/Header/Header';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const UpdatePassword = () => {
     const [oldPassword, setOldPassword] = useState();
@@ -14,11 +15,11 @@ const UpdatePassword = () => {
         e.preventDefault();
 
         if (oldPassword === '') {
-            alert("Atual senha está em branco");
+            toast.error("Atual senha está em branco");
         } else if (newPassword === '') {
-            alert("Nova senha está em branco");
+            toast.error("Nova senha está em branco");
         } else if (confirmNewPassword === '') {
-            alert("Confirmação de senha está em branco");
+            toast.error("Confirmação de senha está em branco");
         } else {
             const confirmPassword = isThePasswordTheSame(newPassword, confirmNewPassword);
 
@@ -30,11 +31,11 @@ const UpdatePassword = () => {
                 setOldPassword('');
                 setNewPassword('');
                 setConfirmNewPassword('');
-                alert('Senha alterada com sucesso');
+                toast.success('Senha alterada com sucesso');
 
 
             } else {
-                alert("A nova senha, e a confirmação de senha estão divergentes.");
+                toast.error("Nova senha, e a confirmação de senha estão divergentes.");
             }
         }
     }
