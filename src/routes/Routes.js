@@ -10,8 +10,6 @@ import RecoveryPasswordSuccess from '../pages/RecoveryPasswordSuccess/RecoveryPa
 
 import Profile from '../pages/Profile/Profile';
 import Progress from '../pages/Progress/Progress';
-import Questoes from '../pages/Questoes/Questoes';
-import Pergunta from '../pages/Pergunta/Pergunta';
 import Modules from '../pages/Modules/Modules';
 import ModuleSelected from '../pages/ModuleSelected/ModuleSelected';
 import UpdatePassword from '../pages/UpdatePassword/UpdatePassword';
@@ -37,8 +35,6 @@ export default function Routes() {
             <RouteWrapper exact path="/home" component={Home} isPrivate />
             <RouteWrapper exact path="/perfil" component={Profile} isPrivate />
             <RouteWrapper exact path="/progresso" component={Progress} isPrivate />
-            <RouteWrapper exact path="/questoes" component={Questoes} isPrivate />
-            <RouteWrapper exact path="/pergunta" component={Pergunta} isPrivate />
             <RouteWrapper exact path="/modulos" component={Modules} isPrivate />
             <RouteWrapper exact path="/modulos/:moduloselecionado" component={ModuleSelected} isPrivate />
             <RouteWrapper exact path="/alterarsenha" component={UpdatePassword} isPrivate />

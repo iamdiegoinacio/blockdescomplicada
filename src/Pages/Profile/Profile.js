@@ -94,7 +94,7 @@ const Profile = () => {
                             <input value={user.email} disabled />
                         </div>
 
-                        <button className="botao-padrao-1" type="submit">Salvar perfil</button>
+                        <button className="pattern-button-1" type="submit">Salvar perfil</button>
                     </form>
                 }
 

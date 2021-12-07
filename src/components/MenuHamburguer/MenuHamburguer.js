@@ -17,7 +17,6 @@ export const MenuHamburguer = () => {
         <Menu width={ 250 }>
             <Link to="/home" className="menu-item"><FaHome style={{marginRight: '10px'}} />Home</Link>
             <Link to="/perfil" className="menu-item"><FaUserAlt style={{marginRight: '10px'}} />Perfil</Link>
-            <Link to="/questoes" className="menu-item"><FaRegQuestionCircle style={{marginRight: '10px'}} />Questões</Link>
             <Link to="/modulos" className="menu-item"><FaGg style={{marginRight: '10px'}} />Módulos</Link>
             <Link to="/progresso" className="menu-item"><FaCodepen style={{marginRight: '10px'}} />Progresso</Link>
             <span onClick={() => handleLogout()} className="menu-item" alt="Deslogar"><FaChevronLeft style={{marginRight: '10px'}} />Deslogar</span>

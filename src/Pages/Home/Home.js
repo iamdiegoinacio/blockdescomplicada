@@ -12,7 +12,6 @@ const Home = () => {
                 <img src="/img/tela-inicial.jpg" alt="Imagem da página home" />
                 <h1>Home</h1>
                 <Link to="/perfil"><HomeButton Setup={{Icon: <FaUserAlt />, text: "Perfil", type: 1}} /></Link>
-                <Link to="/questoes"><HomeButton Setup={{Icon: <FaRegQuestionCircle />, text: "Questões", type: 2}} /></Link>
                 <Link to="/modulos"><HomeButton Setup={{Icon: <FaGg />, text: "Módulos", type: 1}} /></Link>
                 <Link to="/progresso"><HomeButton Setup={{Icon: <FaCodepen/>, text: "Progresso", type: 2}} /></Link>
             </div>

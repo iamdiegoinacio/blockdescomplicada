@@ -47,7 +47,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            {/* <img src="/img/tela-de-cadastro.jpg" alt="Imagem da tela de cadastro" /> */}
+            <img src="/img/tela-de-cadastro.jpg" alt="Imagem da tela de cadastro" />
             <h1>Cadastro</h1>
             <form onSubmit={handleRegister}>
                 <label>Nome</label>
