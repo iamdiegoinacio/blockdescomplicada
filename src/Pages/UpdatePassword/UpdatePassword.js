@@ -5,9 +5,9 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
 
 const UpdatePassword = () => {
-    const [oldPassword, setOldPassword] = useState();
-    const [newPassword, setNewPassword] = useState();
-    const [confirmNewPassword, setConfirmNewPassword] = useState();
+    const [oldPassword, setOldPassword] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
     const { updatePassword } = useContext(AuthContext);
 
@@ -16,10 +16,13 @@ const UpdatePassword = () => {
 
         if (oldPassword === '') {
             toast.error("Atual senha está em branco");
+            return false;
         } else if (newPassword === '') {
             toast.error("Nova senha está em branco");
+            return false;
         } else if (confirmNewPassword === '') {
             toast.error("Confirmação de senha está em branco");
+            return false;
         } else {
             const confirmPassword = isThePasswordTheSame(newPassword, confirmNewPassword);
 
@@ -32,10 +35,11 @@ const UpdatePassword = () => {
                 setNewPassword('');
                 setConfirmNewPassword('');
                 toast.success('Senha alterada com sucesso');
-
+                return true;
 
             } else {
                 toast.error("Nova senha, e a confirmação de senha estão divergentes.");
+                return false;
             }
         }
     }
