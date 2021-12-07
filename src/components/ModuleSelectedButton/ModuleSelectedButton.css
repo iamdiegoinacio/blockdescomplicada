@@ -1,0 +1,29 @@
+.module-selected-item{
+    margin-bottom: 20px;
+}
+
+.module-selected-item h2{
+    margin-bottom: 10px;
+}
+
+.module-selected-item button{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border: 2px solid var(--main-cor-secundaria);
+    background-color: var(--main-cor-neutra);
+    border-radius: 5px;
+    font-family: 'Roboto';
+    color: var(--main-texto);
+    padding-left: 10px;
+}
+
+.module-selected-item button:active{
+    transform: scale(90%);
+}
+
+.module-selected-item img{
+    width: 30px;
+    height: 30px;
+}
