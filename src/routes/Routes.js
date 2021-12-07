@@ -6,7 +6,7 @@ import Home from '../pages/Home/Home';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import RecoveryPassword from '../pages/RecoveryPassword/RecoveryPassword';
-import RecuperarSenhaSucesso from '../pages/RecuperarSenhaSucesso/RecuperarSenhaSucesso';
+import RecoveryPasswordSuccess from '../pages/RecoveryPasswordSuccess/RecoveryPasswordSuccess';
 
 import Perfil from '../pages/Perfil/Perfil';
 import Progresso from '../pages/Progresso/Progresso';
@@ -32,7 +32,7 @@ export default function Routes() {
             <RouteWrapper exact path="/login" component={Login} />
             <RouteWrapper exact path="/cadastro" component={Register} />
             <RouteWrapper exact path="/recuperarsenha" component={RecoveryPassword} />
-            <RouteWrapper exact path="/recuperarsenhasucesso" component={RecuperarSenhaSucesso} />
+            <RouteWrapper exact path="/recuperarsenhasucesso" component={RecoveryPasswordSuccess} />
 
             <RouteWrapper exact path="/home" component={Home} isPrivate />
             <RouteWrapper exact path="/perfil" component={Perfil} isPrivate />
