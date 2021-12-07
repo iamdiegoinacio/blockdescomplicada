@@ -1,4 +1,4 @@
-.foto-de-perfil{
+.profile-photo{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -7,7 +7,7 @@
     padding-right: 4%;
 }
 
-.foto-de-perfil img{
+.profile-photo img{
     border-radius: 100%;
     width: 50px;
     height: 50px;

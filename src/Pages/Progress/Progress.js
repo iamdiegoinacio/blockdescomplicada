@@ -1,5 +1,5 @@
 import './Progress.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import { useState, useEffect} from 'react';
 
 const Progress = () => {
@@ -16,7 +16,7 @@ const Progress = () => {
     
     return (
         <div className="progress-container">
-            <Topo />
+            <Header />
             <div className="progress-content">
                 <img src="/img/tela-inicial.jpg" alt="Imagem da página Progresso" />
                 <h1>Progresso</h1>

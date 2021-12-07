@@ -1,9 +1,9 @@
 import MenuHamburguer from "../MenuHamburguer/MenuHamburguer";
-import './Topo.css'
+import './Header.css'
 import { Link } from 'react-router-dom';
 import { useEffect, useState} from "react";
 
-const Topo = () => {
+const Header = () => {
     const [userAvatar, setUserAvatar] = useState(null);
 
     useEffect(() => {
@@ -18,12 +18,14 @@ const Topo = () => {
     }, [])
 
     return (
-        <div className="topo-container">
+        <div className="header-container">
             <MenuHamburguer />
-            <div className="foto-de-perfil">
-                <Link to="/perfil"><img src={userAvatar === null ? '/img/avatar.png' : userAvatar} alt="Foto de perfil" /></Link>
+            <div className="profile-photo">
+                <Link to="/perfil">
+                    <img src={userAvatar === null ? '/img/avatar.png' : userAvatar} alt="Foto de perfil" />
+                </Link>
             </div>
         </div>
     )
 }
-export default Topo;
+export default Header;

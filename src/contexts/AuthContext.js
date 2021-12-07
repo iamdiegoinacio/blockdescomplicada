@@ -1,6 +1,7 @@
 import { useEffect, useState, createContext } from 'react';
 import firebase from '../services/firebase';
 import { Redirect } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export const AuthContext = createContext({
 
@@ -270,8 +271,6 @@ export const AuthProvider = ({ children }) => {
         .ref(`images/${currentUid}/${avatarImg.name}`)
         .put(avatarImg)
         .then(async () => {
-            console.log('Photo send success');
-
             await firebase.storage().ref(`images/${currentUid}`)
             .child(avatarImg.name).getDownloadURL()
             .then( async (url) => {
@@ -291,6 +290,8 @@ export const AuthProvider = ({ children }) => {
 
                     setCurrentUser(data);
                     storageCurrentUser(data);
+
+                    toast.success("Perfil atualizado com sucesso!");
                 })
                 .catch((err) => {
                     console.log(err);
@@ -322,11 +323,14 @@ export const AuthProvider = ({ children }) => {
                     surname: surname
                 };
 
+                toast.success("Perfil atualizado com sucesso!");
+
                 setCurrentUser(data);
                 storageCurrentUser(data);
             })
             .catch((err) => {
                 console.log(err);
+                toast.error("Falha ao atualizar perfil.");
             })
         }else if(name !== '' && surname !== ''  && avatarImg !== null){
             handleUpload(name, surname, avatarImg, user);

@@ -1,10 +1,10 @@
 import './Questoes.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import BotaoQuestoes from '../../components/BotaoQuestoes/BotaoQuestoes';
 const Questoes = () => {
     return (
         <div className="container-questoes">
-            <Topo />
+            <Header />
             <div className="questoes-conteudo">
                 <img src="/img/tela-questoes.jpg" alt="Imagem da página Questoes" />
                 <h1>Questoes</h1>

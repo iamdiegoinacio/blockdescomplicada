@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Profile.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import { FiUpload } from "react-icons/fi";
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -63,7 +63,7 @@ const Profile = () => {
 
     return (
         <div className="profile-container">
-            <Topo />
+            <Header />
             <div className="profile-content">
                 {user && 
                     <form className="profile-form" onSubmit={(e) => handleSave(name, surname, avatarImg, user, e)}>

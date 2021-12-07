@@ -1,5 +1,5 @@
 import './Home.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import { FaUserAlt, FaRegQuestionCircle, FaGg, FaCodepen } from "react-icons/fa";
 import HomeButton from '../../components/HomeButton/HomeButton';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="home-container">
-            <Topo />
+            <Header />
             <div className="home-content">
                 <img src="/img/tela-inicial.jpg" alt="Imagem da página home" />
                 <h1>Home</h1>

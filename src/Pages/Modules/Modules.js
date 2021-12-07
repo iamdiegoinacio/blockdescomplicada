@@ -1,12 +1,12 @@
 import './Modules.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import ModuleButton from '../../components/ModuleButton/ModuleButton';
 import { Link } from 'react-router-dom';
 
 const Modules = () => {
     return (
         <div className="modules-container">
-            <Topo />
+            <Header />
             <div className="modules-content">
                 <img src="/img/tela-inicial.jpg" alt="Imagem da página home" />
                 <h1>Módulos</h1>

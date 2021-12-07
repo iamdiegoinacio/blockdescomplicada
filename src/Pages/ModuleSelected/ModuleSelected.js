@@ -1,9 +1,8 @@
 import './ModuleSelected.css';
-import Topo from '../../components/Topo/Topo';
-import BotaoModuloEscolhido from '../../components/BotaoModuloEscolhido/BotaoModuloEscolhido';
+import Header from '../../components/Header/Header';
+import ModuleSelectedButton from '../../components/ModuleSelectedButton/ModuleSelectedButton';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 
 const ModuleSelected = () => {
@@ -101,15 +100,15 @@ const ModuleSelected = () => {
 
     return (
         <div className="module-selected-container">
-            <Topo />
+            <Header />
             <div className="module-selected-content">
                 <img src="/img/tela-inicial.jpg" alt="Imagem da página Perfil" />
                 <h1>{selectModule.title}</h1>
 
                 <div className="download-content">
-                    <a href={selectModule.firstContentUrl} download={`${selectModule.firstContentTitle}.pdf`}><BotaoModuloEscolhido titulo={selectModule.firstContentTitle} /> </a>
-                    <a href={selectModule.secondContentUrl} download={`${selectModule.secondContentTitle}.pdf`}><BotaoModuloEscolhido titulo={selectModule.secondContentTitle} /> </a>
-                    <a href={selectModule.thirdContentUrl} download={`${selectModule.thirdContentTitle}.pdf`}><BotaoModuloEscolhido titulo={selectModule.thirdContentTitle} /> </a>
+                    <a href={selectModule.firstContentUrl} download={`${selectModule.firstContentTitle}.pdf`}><ModuleSelectedButton title={selectModule.firstContentTitle} /> </a>
+                    <a href={selectModule.secondContentUrl} download={`${selectModule.secondContentTitle}.pdf`}><ModuleSelectedButton title={selectModule.secondContentTitle} /> </a>
+                    <a href={selectModule.thirdContentUrl} download={`${selectModule.thirdContentTitle}.pdf`}><ModuleSelectedButton title={selectModule.thirdContentTitle} /> </a>
                 </div>
                 <span>Leu todo o conteúdo?</span>
                 <span>Toque no botão a baixo para concluir o módulo.</span>

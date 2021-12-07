@@ -1,5 +1,5 @@
 import './UpdatePassword.css';
-import Topo from '../../components/Topo/Topo';
+import Header from '../../components/Header/Header';
 import { useState, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -49,7 +49,7 @@ const UpdatePassword = () => {
 
     return (
         <div className="update-password-container">
-            <Topo />
+            <Header />
             <div className="update-password-content">
                 <img src="/img/tela-de-recuperacao-de-senha.jpg" alt="Imagem da página Perfil" />
                 <h1>Alterar Senha</h1>
