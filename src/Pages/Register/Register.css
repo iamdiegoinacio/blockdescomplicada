@@ -1,0 +1,25 @@
+.register-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 110vh;
+}
+
+.register-container button{
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.register-container img{
+    width: 50%;
+}
+
+.register-container h1{
+    margin-bottom: 16px;
+}
+
+.register-button{
+    display: flex;
+    justify-content: center;
+}
