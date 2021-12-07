@@ -1,0 +1,31 @@
+.module-selected-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.module-selected-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.module-selected-content img{
+    width: 70%; 
+}
+
+.module-selected-content h1{
+    margin-bottom: 20px;
+}
+
+.module-selected-content form{
+    margin-bottom: 40px;
+}
+
+.download-content{
+    margin-bottom: 20px;
+}
+
+.module-selected-content span:nth-child(5){
+    margin-bottom: 30px;
+}
