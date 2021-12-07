@@ -1,0 +1,27 @@
+.home-button, .home-button-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 60px;
+    background-color: var(--main-cor-secundaria);
+    border: 1px solid var(--main-cor-secundaria);
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Roboto';
+    margin-bottom: 20px;
+}
+
+.home-button-2{
+    background-color: var(--main-cor-terciaria);
+}
+
+.button-home-icon{
+    width: auto;
+}
+
+.button-home-text{
+    width: 70%;
+}
