@@ -1,0 +1,23 @@
+.welcome-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; 
+}
+
+.welcome-container img{
+    width: 60%;
+    margin-top: 48px;
+    margin-bottom: 64px;
+}
+
+.welcome-container h1{
+    margin-bottom: 32px;
+}
+
+.welcome-container p{
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 128px;
+}
