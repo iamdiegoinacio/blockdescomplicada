@@ -15,7 +15,7 @@ const Login = () => {
     }
 
     return (
-        <div className="container-login">
+        <div className="login-container">
             <img src="/img/tela-de-login.jpg" alt="Imagem da tela de login" />
             <h1>Login</h1>
             <form onSubmit={handleLogin}>
@@ -25,8 +25,8 @@ const Login = () => {
                 <label>Senha</label>
                 <input type="password" placeholder="Digite a sua senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
-                <div className="botao-login">
-                    <button className="botao-padrao-1" type="submit">
+                <div className="login-button">
+                    <button className="pattern-button-1" type="submit">
                         fazer login
                     </button>
                 </div>

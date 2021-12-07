@@ -78,7 +78,7 @@ span{
   font-size: 14px;
 }
 
-.botao-padrao-1{
+.pattern-button-1{
   width: 50%;
   height: 50px;
   border-radius: 5px;
@@ -91,7 +91,7 @@ span{
   font-size: 18px;
 }
 
-.botao-padrao-1:active{
+.pattern-button-1:active{
   background-color: var(--main-cor-secundaria);
 }
 

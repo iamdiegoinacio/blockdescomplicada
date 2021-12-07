@@ -1,4 +1,4 @@
-.container-login{
+.login-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -6,23 +6,23 @@
     height: 100vh;
 }
 
-.container-login button{
+.login-container button{
     margin-bottom: 32px;
 }
 
-.container-login a{
+.login-container a{
     margin-bottom: 16px;
 }
 
-.container-login img{
+.login-container img{
     width: 90%;
 }
 
-.container-login h1{
+.login-container h1{
     margin-bottom: 32px;
 }
 
-.botao-login{
+.login-button{
     display: flex;
     justify-content: center;
     margin-top: 16px;
