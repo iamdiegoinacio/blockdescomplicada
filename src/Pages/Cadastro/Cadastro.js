@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import './Cadastro.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const Cadastro = () => {
     const [ name, setName ] = useState('');
@@ -24,11 +25,11 @@ const Cadastro = () => {
     function handleRegister(e){
         e.preventDefault();
         if(name === ''){
-            alert('Nome não pode estar em branco.');
+            toast.error("Nome em branco!");
         }else if(surname===''){
-            alert('Sobrenome não pode estar em branco');
+            toast.error('Sobrenome não pode estar em branco');
         }else if(email===''){
-            alert('Email não pode estar em branco');
+            toast.error('Email não pode estar em branco');
         }else{
             const temp = isPasswordTheSame(password, confirmPassword);
             if(temp){
@@ -39,7 +40,7 @@ const Cadastro = () => {
                 setPassword('');
                 setConfirmPassword('');
             }else{
-                alert('As senhas não são iguais.');
+                toast.error('As senhas não são iguais.');
             }
         }
     }
