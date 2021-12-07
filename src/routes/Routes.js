@@ -8,8 +8,8 @@ import Register from '../pages/Register/Register';
 import RecoveryPassword from '../pages/RecoveryPassword/RecoveryPassword';
 import RecoveryPasswordSuccess from '../pages/RecoveryPasswordSuccess/RecoveryPasswordSuccess';
 
-import Perfil from '../pages/Perfil/Perfil';
-import Progresso from '../pages/Progresso/Progresso';
+import Profile from '../pages/Profile/Profile';
+import Progress from '../pages/Progress/Progress';
 import Questoes from '../pages/Questoes/Questoes';
 import Pergunta from '../pages/Pergunta/Pergunta';
 import Modulos from '../pages/Modulos/Modulos';
@@ -35,8 +35,8 @@ export default function Routes() {
             <RouteWrapper exact path="/recuperarsenhasucesso" component={RecoveryPasswordSuccess} />
 
             <RouteWrapper exact path="/home" component={Home} isPrivate />
-            <RouteWrapper exact path="/perfil" component={Perfil} isPrivate />
-            <RouteWrapper exact path="/progresso" component={Progresso} isPrivate />
+            <RouteWrapper exact path="/perfil" component={Profile} isPrivate />
+            <RouteWrapper exact path="/progresso" component={Progress} isPrivate />
             <RouteWrapper exact path="/questoes" component={Questoes} isPrivate />
             <RouteWrapper exact path="/pergunta" component={Pergunta} isPrivate />
             <RouteWrapper exact path="/modulos" component={Modulos} isPrivate />
