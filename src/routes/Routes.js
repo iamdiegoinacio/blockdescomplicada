@@ -1,11 +1,11 @@
 import { Switch } from 'react-router-dom';
 import RouteWrapper from './Route';
-import BoasVindas from '../pages/BoasVindas/BoasVindas';
+import Welcome from '../pages/Welcome/Welcome';
 import Home from '../pages/Home/Home';
 
 import Login from '../pages/Login/Login';
-import Cadastro from '../pages/Cadastro/Cadastro';
-import RecuperarSenha from '../pages/RecuperarSenha/RecuperarSenha';
+import Register from '../pages/Register/Register';
+import RecoveryPassword from '../pages/RecoveryPassword/RecoveryPassword';
 import RecuperarSenhaSucesso from '../pages/RecuperarSenhaSucesso/RecuperarSenhaSucesso';
 
 import Perfil from '../pages/Perfil/Perfil';
@@ -22,7 +22,7 @@ export default function Routes() {
     if(isFirstAccess===null){
         return(
             <Switch>
-                <RouteWrapper exact path="/" component={BoasVindas} />
+                <RouteWrapper exact path="/" component={Welcome} />
             </Switch>
         )
     }
@@ -30,8 +30,8 @@ export default function Routes() {
         <Switch>
             <RouteWrapper exact path="/" component={Login} />
             <RouteWrapper exact path="/login" component={Login} />
-            <RouteWrapper exact path="/cadastro" component={Cadastro} />
-            <RouteWrapper exact path="/recuperarsenha" component={RecuperarSenha} />
+            <RouteWrapper exact path="/cadastro" component={Register} />
+            <RouteWrapper exact path="/recuperarsenha" component={RecoveryPassword} />
             <RouteWrapper exact path="/recuperarsenhasucesso" component={RecuperarSenhaSucesso} />
 
             <RouteWrapper exact path="/home" component={Home} isPrivate />
