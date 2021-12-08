@@ -22,9 +22,9 @@ const ModuleSelected = () => {
                     firstContentTitle: 'O que é uma rede descentralizada?',
                     secondContentTitle: 'O que é uma Blockchain?',
                     thirdContentTitle: 'Centralização vs Descentralização.',
-                    firstContentUrl: '/data/teste.pdf',
-                    secondContentUrl: '/data/teste.pdf',
-                    thirdContentUrl: '/data/teste.pdf',
+                    firstContentUrl: '/data/oqueedescentralizacao.pdf',
+                    secondContentUrl: '/data/oqueeblockchain.pdf',
+                    thirdContentUrl: '/data/centralizacaovsdescentralizacao.pdf',
                     codModule: 1
                 })
 
@@ -33,10 +33,10 @@ const ModuleSelected = () => {
                     title: 'Módulo 2',
                     firstContentTitle: 'O futuro utilizando Blockchain.',
                     secondContentTitle: 'Um sistema financeiro mais seguro.',
-                    thirdContentTitle: 'Onde a Blockchain está presente?',
-                    firstContentUrl: '/data/teste.pdf',
-                    secondContentUrl: '/data/teste.pdf',
-                    thirdContentUrl: '/data/teste.pdf',
+                    thirdContentTitle: 'A presença da blockchain na sociedade.',
+                    firstContentUrl: '/data/ofuturoutilizandoblockchain.pdf',
+                    secondContentUrl: '/data/umsistemafinanceiromaisseguro.pdf',
+                    thirdContentUrl: '/data/apresencadablockchainnasociedade.pdf',
                     codModule: 2
                 })
             }
@@ -46,9 +46,9 @@ const ModuleSelected = () => {
                     firstContentTitle: 'Como as criptomoedas funcionam.',
                     secondContentTitle: 'Como funcionam as transações.',
                     thirdContentTitle: 'Criando a primeira carteira descentralizada.',
-                    firstContentUrl: '/data/teste.pdf',
-                    secondContentUrl: '/data/teste.pdf',
-                    thirdContentUrl: '/data/teste.pdf',
+                    firstContentUrl: '/data/comoascriptomoedasfuncionam.pdf',
+                    secondContentUrl: '/data/comofuncionamastransacoes.pdf',
+                    thirdContentUrl: '/data/criandoaprimeiracarteiradescentralizada.pdf',
                     codModule: 3
                 })
             }
@@ -58,9 +58,9 @@ const ModuleSelected = () => {
                     firstContentTitle: 'Uma corretora descentralizada.',
                     secondContentTitle: 'Jogos descentralizados.',
                     thirdContentTitle: 'O que esperar do futuro?',
-                    firstContentUrl: '/data/teste.pdf',
-                    secondContentUrl: '/data/teste.pdf',
-                    thirdContentUrl: '/data/teste.pdf',
+                    firstContentUrl: '/data/corretoradescentralizada.pdf',
+                    secondContentUrl: '/data/jogosdescentralizados.pdf',
+                    thirdContentUrl: '/data/oqueesperardofuturo.pdf',
                     codModule: 4
                 })
             } else {

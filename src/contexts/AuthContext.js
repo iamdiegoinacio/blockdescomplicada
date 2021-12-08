@@ -156,8 +156,6 @@ export const AuthProvider = ({ children }) => {
                firstModule: true 
             })
             .then(async () => {
-                console.log('First Module true');
-    
                 const user = await firebase.firestore().collection('users').doc(currentUser.uid).get();
 
                 await firebase.firestore().collection('users').doc(currentUser.uid).update({
@@ -169,6 +167,7 @@ export const AuthProvider = ({ children }) => {
                     storageUser.progress = storageUser.progress += 25;
                     storageCurrentUser(storageUser);
                     refreshPage();
+                    toast.success("Parabéns, você completou o módulo: ",module);
                 })
                 .catch((error) => {
                     console.log(error);
@@ -182,8 +181,6 @@ export const AuthProvider = ({ children }) => {
                 secondModule: true 
              })
              .then(async () => {
-                 console.log('Second Module true');
-     
                  const user = await firebase.firestore().collection('users').doc(currentUser.uid).get();
  
                  await firebase.firestore().collection('users').doc(currentUser.uid).update({
@@ -195,6 +192,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
                      refreshPage();
+                     toast.success("Parabéns, você completou o módulo: ",module);
                  })
                  .catch((error) => {
                      console.log(error);
@@ -208,8 +206,6 @@ export const AuthProvider = ({ children }) => {
                 thirdModule: true 
              })
              .then(async () => {
-                 console.log('Second Module true');
-     
                  const user = await firebase.firestore().collection('users').doc(currentUser.uid).get();
  
                  await firebase.firestore().collection('users').doc(currentUser.uid).update({
@@ -221,6 +217,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
                      refreshPage();
+                     toast.success("Parabéns, você completou o módulo: ",module);
                  })
                  .catch((error) => {
                      console.log(error);
@@ -234,7 +231,6 @@ export const AuthProvider = ({ children }) => {
                 fourthModule: true 
              })
              .then(async () => {
-                 console.log('Second Module true');
      
                  const user = await firebase.firestore().collection('users').doc(currentUser.uid).get();
  
@@ -247,6 +243,7 @@ export const AuthProvider = ({ children }) => {
                      storageUser.progress = storageUser.progress += 25;
                      storageCurrentUser(storageUser);
                      refreshPage();
+                     toast.success("Parabéns, você completou o módulo: ",module);
                  })
                  .catch((error) => {
                      console.log(error);
