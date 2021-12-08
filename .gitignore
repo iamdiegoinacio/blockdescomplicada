@@ -10,6 +10,8 @@
 
 # production
 /build
+/src/questoes.json
+/src/services/firebase.js
 
 # misc
 .DS_Store
@@ -24,5 +26,3 @@ yarn-error.log*
 
 .env
 
-src/questoes.json
-src/services/firebase.js
