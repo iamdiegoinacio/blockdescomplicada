@@ -11,3 +11,5 @@ Cole os dados do seu projeto firebase no arquivo firebase.js localizado na pasta
 ## Iniciando projeto
 Após a instalação use npm start para iniciar o projeto
 
+## Link do projeto em produção
+https://61b0fcb3dc5ac82ad07255ab--vibrant-beaver-b8fdaa.netlify.app/home
